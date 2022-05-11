@@ -4,7 +4,7 @@ Vanderbilt
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![https://github.com/liltran615/Azure-Project-1/blob/main/Diagrams/Azure%20Lab%20Diagram.png](Images/diagram_filename.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -81,4 +81,4 @@ TODO: Answer the following questions to fill in the blanks:
 Which file is the playbook? Where do you copy it?
 Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 _Which URL do you navigate to in order to check that the ELK server is running?
-As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
+
