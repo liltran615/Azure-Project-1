@@ -53,6 +53,8 @@ Jump-Box
 What was its IP address?
 IP : 10.0.0.1
 
+A summary of the access policies in place can be found in the table below.
+
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | SSH via Admin's IP   |
