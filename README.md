@@ -20,13 +20,17 @@ How to Use the Ansible Build
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-TODO: What does Filebeat watch for?
-TODO: What does Metricbeat record?
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+
+Load balancing is the process of distributing incoming reequests/tasks over a set of resources in order to prevent disproportionate skew of requests load towards one specific server. For example, this can be particularly useful in maintaining availability of services to customers in the setting of a DoS attack on one of the server, rendering it unavailable. If the same services are available on an alternate server, the load balancer can distribute the web traffic to the alternate server when the primary server is 'overloaded' - this way the services (such as sales) continue to remain operational even in the mist of the attack. In addition it can also be configured to limit access to particular servers to prevent penetration by hackers.
+
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files, logs and system metrics.
+
+Filebeat collects data about the file system. It is helpful in detecting changes to certain important files stampd by time like for example if a hacker attemps to change etc/passwd and this information is then sent to Elasticsearch on the ELK Server
+
+Metricbeat Collects metrics to help with the assessment regarding the operational state of computer machines on the network (VMs in this case) and then sends it to Elasticsearch on ELK Server. For example it can be helpful in determining CPU usage, memory disk I/O, Network I/O and Uptime information.
+
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -37,19 +41,24 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 ### Access Policies
 
-The machines on the internal network are not exposed to the public Internet.
+Only the Jump-box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-TODO: Add whitelisted IP addresses
-Machines within the network can only be accessed by _____.
-TODO: Which machine did you allow to access your ELK VM? What was its IP address?
-A summary of the access policies in place can be found in the table below.
+Workstation with personal ip through SSH P22
+
+Machines within the network can only be accessed by Jump-box.
+
+Which machine did you allow to access your ELK VM?
+Jump-Box
+
+What was its IP address?
+IP : 10.0.0.1
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | SSH via Admin's IP   |
+| WEB1     | No                    |                      |
+| WEB2     | No                    |                      |
+| ELK      | No                    |                      |
 
 ### Elk Configuration
 
