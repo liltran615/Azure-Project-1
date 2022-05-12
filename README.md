@@ -68,6 +68,7 @@ Which machine did you allow to access your ELK VM?
 JUMP-BOX-PROVISOR :desktop_computer: :earth_americas:
 
 What was its IP address?
+
 IP : 10.0.0.1
 
 A summary of the access policies in place can be found in the table below.
@@ -82,7 +83,9 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to make configuration on the ELK machine. No configuration was performed manually which will decrease the chances of mistakes.
+
 [ansible.yml](ansible.yml.TXT)
+
 [ansibleinstall-elk.yml.TXT](ansibleinstall-elk.yml.TXT)
 
 It makes the process of configuring and updating machines to the network easier. We will only have to make changes to the ansible playbook, and it will automatically be changed to all the machines linked with the playbook.
