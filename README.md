@@ -83,7 +83,6 @@ Install Docker Python Module
 Increases Virtual Memory
 Downloads and launches a docker ELK container with the ports 5601, 9200, 5044
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![Docker](Diagrams/Docker%20Image.jpg)
 
@@ -98,7 +97,7 @@ We have installed the following Beats on these machines:
 Filebeat
 Metricbeat
 
-These Beats allow us to collect the following information from each machine:
+These allow us to collect the following information:
 
 Filebeat will be used to collect log files from very specific files such as Apache, Microsft Azure tools and MySQL databases.
 
