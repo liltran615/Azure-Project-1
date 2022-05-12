@@ -31,9 +31,9 @@ Load balancing ensures that the application will be highly available, in additio
 
 Load balancing is the process of distributing incoming requests/tasks over a set of resources in order to prevent disproportionate skew of requests load towards one specific server. For example, this can be particularly useful in maintaining availability of services to customers in the setting of a DoS attack on one of the server, rendering it unavailable. If the same services are available on an alternate server, the load balancer can distribute the web traffic to the alternate server when the primary server is 'overloaded' - this way the services (such as sales) continue to remain operational even in the mist of the attack. In addition it can also be configured to limit access to particular servers to prevent penetration by hackers.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files, logs and system metrics.
+Integrating an ELK server allows users to easily monitor the vulnerable Virtual Machines for changes to the files, logs and system metrics.
 
-Filebeat collects data about the file system. It is helpful in detecting changes to certain important files stampd by time like for example if a hacker attemps to change etc/passwd and this information is then sent to Elasticsearch on the ELK Server
+Filebeat collects data about the file system, and this information is then sent to Elasticsearch on the ELK Server
 
 Metricbeat Collects metrics to help with the assessment regarding the operational state of computer machines on the network, and then sends it to Elasticsearch on ELK Server. 
 
@@ -99,7 +99,7 @@ Metricbeat
 
 These allow us to collect the following information:
 
-Filebeat will be used to collect log files from very specific files such as Apache, Microsft Azure tools and MySQL databases.
+Filebeat will be used to collect log files from applications like Apache, Microsft Azure tools and MySQL databases.
 
 Metericbeat will be used to monitor VM statistics, per CPU core statistics, per filesystem statistics, memory statistics and network statistics.
 
