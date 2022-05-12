@@ -1,5 +1,6 @@
 # Azure-Project-1
 Vanderbilt
+:technologist:
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
@@ -59,7 +60,7 @@ Workstation with PERSONAL IP Address through SSH Port 22
 Machines within the network can only be accessed by JUMP-BOX-PROVISOR.
 
 Which machine did you allow to access your ELK VM?
-JUMP-BOX-PROVISOR
+JUMP-BOX-PROVISOR :desktop_computer:
 
 What was its IP address?
 IP : 10.0.0.1
@@ -95,20 +96,26 @@ Downloads and launches a docker ELK container with the ports 5601, 9200, 5044
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
-Web-1: 10.0.0.5
-Web-2: 10.0.0.7
+Web-1: 10.0.0.5 :computer:
+
+Web-2: 10.0.0.7 :computer:
 
 We have installed the following Beats on these machines:
 
 Filebeat [filebeat-playbook.yml.TXT](filebeat-playbook.yml.TXT)
 
+![](Pictures/file%20beat%20status.png)
+
 Metricbeat [metricbeat-playbook.TXT](metricbeat-playbook.TXT)
 
-These allow us to collect the following information:
+![](Pictures/metric%20beat%20status.png)
 
-Filebeat will be used to collect log files from applications like Apache, Microsft Azure tools and MySQL databases.
 
-Metericbeat will be used to monitor VM statistics, per CPU core statistics, per file system statistics, memory statistics and network statistics.
+This allows us to collect the following information:
+
+Filebeat to be used to collect log files from applications like Microsft Azure Tools, Apache,  and MySQL databases.
+
+Metericbeat to be used to monitor CPU core statistics, VM statistics file system statistics,network statistics, memory statistics, etc
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node configured. 
