@@ -8,13 +8,13 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml file may be used to install only certain pieces of it, such as Filebeat.
 
-![ansible.yml](ansible.yml.TXT)
+[ansible.yml](ansible.yml.TXT)
 
-![ansibleinstall-elk.yml.TXT](ansibleinstall-elk.yml.TXT)
+[ansibleinstall-elk.yml.TXT](ansibleinstall-elk.yml.TXT)
 
-![metricbeat-playbook.TXT](metricbeat-playbook.TXT)
+[metricbeat-playbook.TXT](metricbeat-playbook.TXT)
 
-![filebeat-playbook.yml.TXT](filebeat-playbook.yml.TXT)
+[filebeat-playbook.yml.TXT](filebeat-playbook.yml.TXT)
 
 This document contains the following details:
 Description of the Topologu
@@ -27,7 +27,7 @@ How to Use the Ansible Build
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+Load balancing ensures the application will be highly available, in addition to restricting access to the network.
 
 Load balancer performs the following functions:
 
@@ -52,9 +52,9 @@ The configuration details of each machine may be found below.
 
 ### Access Policies
 
-Only the Jump-box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the JUMP-BOX-PROVISOR machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Workstation with MY personal ip address through SSH P22
+Workstation with PERSONAL IP Address through SSH Port 22
 
 Machines within the network can only be accessed by JUMP-BOX-PROVISOR.
 
@@ -75,9 +75,11 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to make configuration of the ELK machine. No configuration was performed manually. This will decrease the chances of mistakes.
+Ansible was used to make configuration on the ELK machine. No configuration was performed manually which will decrease the chances of mistakes.
+[ansible.yml](ansible.yml.TXT)
+[ansibleinstall-elk.yml.TXT](ansibleinstall-elk.yml.TXT)
 
-It makes the process of configuring additional machines, or updating changes to the network easier. We will only have to make changes to the ansible playbook, and it will automatically be changed to all the machines linked with the playbook.
+It makes the process of configuring additional and updating machines to the network easier. We will only have to make changes to the ansible playbook, and it will automatically be changed to all the machines linked with the playbook.
 
 The playbook implements the following tasks:
 
@@ -98,8 +100,9 @@ Web-2: 10.0.0.7
 
 We have installed the following Beats on these machines:
 
-Filebeat
-Metricbeat
+Filebeat [filebeat-playbook.yml.TXT](filebeat-playbook.yml.TXT)
+
+Metricbeat [metricbeat-playbook.TXT](metricbeat-playbook.TXT)
 
 These allow us to collect the following information:
 
