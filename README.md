@@ -50,9 +50,9 @@ The configuration details of each machine may be found below.
 
 Only the Jump-box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Workstation with personal ip through SSH P22
+Workstation with MY personal ip address through SSH P22
 
-Machines within the network can only be accessed by Jump-box.
+Machines within the network can only be accessed by JUMP-BOX-PROVISOR.
 
 Which machine did you allow to access your ELK VM?
 JUMP-BOX-PROVISOR
@@ -104,9 +104,9 @@ Filebeat will be used to collect log files from applications like Apache, Micros
 Metericbeat will be used to monitor VM statistics, per CPU core statistics, per filesystem statistics, memory statistics and network statistics.
 
 ### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
+In order to use the playbook, you will need to have an Ansible control node configured. 
 
-SSH into the control node and follow the steps below:
+SSH into the control node and follow the steps:
 
 STEP 1 Copy the configuration file to the ansible container.
 
