@@ -121,12 +121,12 @@ Metricbeat [metricbeat-playbook.TXT](metricbeat-playbook.TXT)
 
 This allows us to collect the following information:
 
-Filebeat to be used to collect log files from applications like Microsft Azure Tools, Apache,  and MySQL databases.
+Filebeat to be used to collect log files from applications like Microsoft Azure, Apache, MySQL databases, etc.
 
-Metericbeat to be used to monitor CPU core statistics, VM statistics file system statistics,network statistics, memory statistics, etc
+Metericbeat to be used to monitor CPU core statistics, VM statistics file system statistics,network statistics, memory statistics, etc.
 
 ### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node configured. 
+In order to use the playbook, you will need to have an Ansible control configured. 
 
 SSH into the control node, and follow the steps:
 
