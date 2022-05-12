@@ -8,7 +8,14 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml file may be used to install only certain pieces of it, such as Filebeat.
 
-TODO: Enter the playbook file.
+![ansible.yml](ansible.yml.TXT)
+
+![ansibleinstall-elk.yml.TXT](ansibleinstall-elk.yml.TXT)
+
+![metricbeat-playbook.TXT](metricbeat-playbook.TXT)
+
+![filebeat-playbook.yml.TXT](filebeat-playbook.yml.TXT)
+
 This document contains the following details:
 Description of the Topologu
 Access Policies
@@ -22,7 +29,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
-Load balancing is the process of distributing incoming reequests/tasks over a set of resources in order to prevent disproportionate skew of requests load towards one specific server. For example, this can be particularly useful in maintaining availability of services to customers in the setting of a DoS attack on one of the server, rendering it unavailable. If the same services are available on an alternate server, the load balancer can distribute the web traffic to the alternate server when the primary server is 'overloaded' - this way the services (such as sales) continue to remain operational even in the mist of the attack. In addition it can also be configured to limit access to particular servers to prevent penetration by hackers.
+Load balancing is the process of distributing incoming requests/tasks over a set of resources in order to prevent disproportionate skew of requests load towards one specific server. For example, this can be particularly useful in maintaining availability of services to customers in the setting of a DoS attack on one of the server, rendering it unavailable. If the same services are available on an alternate server, the load balancer can distribute the web traffic to the alternate server when the primary server is 'overloaded' - this way the services (such as sales) continue to remain operational even in the mist of the attack. In addition it can also be configured to limit access to particular servers to prevent penetration by hackers.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files, logs and system metrics.
 
@@ -48,7 +55,7 @@ Workstation with personal ip through SSH P22
 Machines within the network can only be accessed by Jump-box.
 
 Which machine did you allow to access your ELK VM?
-Jump-Box
+JUMP-BOX-PROVISOR
 
 What was its IP address?
 IP : 10.0.0.1
@@ -64,16 +71,16 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+Ansible was used to make configuration of the ELK machine. No configuration was performed manually. This will decrease the chances of mistakes.
 
-It simplifies the process of configuring additional machines or updating changes to all existing ones to the network simultaneously. We will only have to make changes to the ansible playbook and it will automatically be implemented to all the machines linked with the playbook.
+It makes the process of configuring additional machines, or updating changes to the network easier. We will only have to make changes to the ansible playbook, and it will automatically be changed to all the machines linked with the playbook.
 
 The playbook implements the following tasks:
 
-Installs Docker, which intern facilitates instalation of containers
-Installs Python-pip
-Installs Docker python module
-Increases virtual memory
+Install Docker, which intern facilitates instalation of containers
+Install Python-pip
+Install Docker Python Module
+Increases Virtual Memory
 Downloads and launches a docker ELK container with the ports 5601, 9200, 5044
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -88,18 +95,21 @@ Web-2: 10.0.0.7
 
 We have installed the following Beats on these machines:
 
-filebeat
-metricbeat
+Filebeat
+Metricbeat
+
 These Beats allow us to collect the following information from each machine:
 
-Filebeat will be used to collect log files from very specific files such as Apache, Microsft Azure tools and web servers, MySQL databases.
-Metericbeat will be used to monitor VM stats, per CPU core stats, per filesystem stats, memory stats and network stats.
+Filebeat will be used to collect log files from very specific files such as Apache, Microsft Azure tools and MySQL databases.
+
+Metericbeat will be used to monitor VM statistics, per CPU core statistics, per filesystem statistics, memory statistics and network statistics.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
-Copy the configuration file to the ansible container.
-Update the configuration file to include hosts: Ip address of the ELK server ["10.2.0.4"]
-Run the playbook, and navigate to http://(vm ip):5601/app/kibana to check that the installation worked as expected.
+
+STEP 1 Copy the configuration file to the ansible container.
+STEP 2 Update the configuration file to include hosts: Ip address of the ELK server ["10.2.0.4"]
+STEP 3 Run the playbook, and navigate to http://(vm ip):5601/app/kibana to check that the installation worked as expected.
 
