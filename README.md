@@ -84,7 +84,7 @@ Increases Virtual Memory
 Downloads and launches a docker ELK container with the ports 5601, 9200, 5044
 
 
-![Docker](Diagrams/Docker%20Image.jpg)
+![Docker PS](Pictures/sudo%20docker%20ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
