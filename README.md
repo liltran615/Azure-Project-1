@@ -10,12 +10,16 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml file may be used to install only certain pieces of it, such as Filebeat.
 
 [ansible.yml](ansible.yml.TXT)
+:orange_book:
 
 [ansibleinstall-elk.yml.TXT](ansibleinstall-elk.yml.TXT)
+:blue_book:
 
 [metricbeat-playbook.TXT](metricbeat-playbook.TXT)
+:closed_book:
 
 [filebeat-playbook.yml.TXT](filebeat-playbook.yml.TXT)
+:green_book:
 
 This document contains the following details:
 Description of the Topologu
@@ -57,10 +61,11 @@ Only the JUMP-BOX-PROVISOR machine can accept connections from the Internet. Acc
 
 Workstation with PERSONAL IP Address through SSH Port 22
 
-Machines within the network can only be accessed by JUMP-BOX-PROVISOR.
+Machines within the network can only be accessed by JUMP-BOX.
 
 Which machine did you allow to access your ELK VM?
-JUMP-BOX-PROVISOR :desktop_computer:
+
+JUMP-BOX-PROVISOR :desktop_computer: :earth_americas:
 
 What was its IP address?
 IP : 10.0.0.1
@@ -80,9 +85,9 @@ Ansible was used to make configuration on the ELK machine. No configuration was 
 [ansible.yml](ansible.yml.TXT)
 [ansibleinstall-elk.yml.TXT](ansibleinstall-elk.yml.TXT)
 
-It makes the process of configuring additional and updating machines to the network easier. We will only have to make changes to the ansible playbook, and it will automatically be changed to all the machines linked with the playbook.
+It makes the process of configuring and updating machines to the network easier. We will only have to make changes to the ansible playbook, and it will automatically be changed to all the machines linked with the playbook.
 
-The playbook implements the following tasks:
+The playbook implements the following tasks: :books:
 
 Install Docker, which intern facilitates instalation of containers
 Install Python-pip
@@ -96,9 +101,9 @@ Downloads and launches a docker ELK container with the ports 5601, 9200, 5044
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
-Web-1: 10.0.0.5 :computer:
+Web-1: 10.0.0.5 :computer: :globe_with_meridians:
 
-Web-2: 10.0.0.7 :computer:
+Web-2: 10.0.0.7 :computer: :globe_with_meridians:
 
 We have installed the following Beats on these machines:
 
