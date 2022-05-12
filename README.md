@@ -85,7 +85,7 @@ Downloads and launches a docker ELK container with the ports 5601, 9200, 5044
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![Docker](Diagrams/Docker%20Image.jpg)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -110,6 +110,8 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 
 STEP 1 Copy the configuration file to the ansible container.
+
 STEP 2 Update the configuration file to include hosts: Ip address of the ELK server ["10.2.0.4"]
+
 STEP 3 Run the playbook, and navigate to http://(vm ip):5601/app/kibana to check that the installation worked as expected.
 
