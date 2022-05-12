@@ -36,13 +36,13 @@ Load balancing ensures the application will be highly available, in addition to 
 
 Load balancer performs the following functions:
 
-1) Distributes client requests or network load across multiple servers
-2) Sends requests only to servers that are online
-3) Provides flexibility to add or subtract servers 
+1) Distributes client requests or network load across multiple servers.
+2) Sends requests to online servers.
+3) Provides flexibility to add or delete servers.
 
 Integrating an ELK server allows users to monitor the Virtual Machines for changes to the files, logs and system metrics.
 
-Filebeat collects data about the file system, and this information is sent to Elasticsearch on ELK Server
+Filebeat collects data about the file system, and this is sent to Elasticsearch on ELK Server.
 
 Metricbeat Collects metrics to help with the assessment regarding the operational state of computer machines on the network, and then sends it to Elasticsearch on ELK Server. 
 
@@ -59,7 +59,7 @@ The configuration details of each machine may be found below.
 
 Only the JUMP-BOX-PROVISOR machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Workstation with PERSONAL IP Address through SSH Port 22
+Workstation with PERSONAL IP Address through SSH Port 22.
 
 Machines within the network can only be accessed by JUMP-BOX.
 
