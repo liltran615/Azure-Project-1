@@ -29,11 +29,15 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
-Load balancing is the process of distributing incoming requests over a set of resources in order to prevent disproportionate skew of requests load towards one specific server. For example, this can be particularly useful in maintaining availability of services to customers in the setting of a DoS attack on one of the server, rendering it unavailable. If the same services are available on an alternate server, the load balancer can distribute the web traffic to the alternate server when the primary server is 'overloaded' - this way the services (such as sales) continue to remain operational even in the mist of the attack. In addition it can also be configured to limit access to particular servers to prevent penetration by hackers.
+Load balancer performs the following functions:
 
-Integrating an ELK server allows users to easily monitor the vulnerable Virtual Machines for changes to the files, logs and system metrics.
+1) Distributes client requests or network load across multiple servers
+2) Sends requests only to servers that are online
+3) Provides flexibility to add or subtract servers 
 
-Filebeat collects data about the file system, and this information is then sent to Elasticsearch on the ELK Server
+Integrating an ELK server allows users to monitor the Virtual Machines for changes to the files, logs and system metrics.
+
+Filebeat collects data about the file system, and this information is sent to Elasticsearch on ELK Server
 
 Metricbeat Collects metrics to help with the assessment regarding the operational state of computer machines on the network, and then sends it to Elasticsearch on ELK Server. 
 
@@ -101,16 +105,16 @@ These allow us to collect the following information:
 
 Filebeat will be used to collect log files from applications like Apache, Microsft Azure tools and MySQL databases.
 
-Metericbeat will be used to monitor VM statistics, per CPU core statistics, per filesystem statistics, memory statistics and network statistics.
+Metericbeat will be used to monitor VM statistics, per CPU core statistics, per file system statistics, memory statistics and network statistics.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node configured. 
 
 SSH into the control node and follow the steps:
 
-STEP 1 Copy the configuration file to the ansible container.
+STEP 1) Copy the configuration file to the ansible container.
 
-STEP 2 Update the configuration file to include hosts: Ip address of the ELK server ["10.2.0.4"]
+STEP 2) Update the configuration file to include hosts: Ip address of the ELK server ["10.2.0.4"]
 
-STEP 3 Run the playbook, and navigate to http://(vm ip):5601/app/kibana to check that the installation worked as expected.
+STEP 3) Run the playbook, and navigate to http://(vm ip):5601/app/kibana to check that the installation worked as expected.
 
