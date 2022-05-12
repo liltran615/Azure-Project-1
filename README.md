@@ -128,7 +128,7 @@ Metericbeat to be used to monitor CPU core statistics, VM statistics file system
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node configured. 
 
-SSH into the control node and follow the steps:
+SSH into the control node, and follow the steps:
 
 STEP 1) Copy the configuration file to the ansible container.
 
