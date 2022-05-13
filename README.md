@@ -36,9 +36,9 @@ Load balancing ensures the application will be available, while restricting acce
 
 Load balancer performs the following functions:
 
-1) Distributes client requests or network load across multiple servers.
+1) Distributes client requests and network load across multiple servers.
 2) Sends requests to online servers.
-3) Provides flexibility to add or delete servers.
+3) Provides flexibility to add, or delete servers.
 
 Integrating an ELK server allows users to monitor the Virtual Machines for changes to the files, logs and system metrics.
 
@@ -50,7 +50,7 @@ The configuration details of each machine may be found below.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux UBUNTU 18.4           |
+| JumpBox  | Gateway  | 10.0.0.1   | Linux UBUNTU 18.4|
 | WEB1     | DVWA     | 10.0.0.5   | Linux UBUNTU 18.4|
 | WEB2     | DVWA     | 10.0.0.7   | Linux UBUNTU 18.4|
 | ELKVM    | ELK Stack| 10.2.0.4   | Linux UBUNTU 18.4|
@@ -63,11 +63,11 @@ Workstation with PERSONAL IP Address through SSH Port 22.
 
 Machines within the network can only be accessed by JUMP-BOX.
 
-Which machine did you allow to access your ELK VM?
+Which machine did you allow to access your ELK VM???
 
 JUMP-BOX-PROVISOR :desktop_computer: :earth_americas:
 
-What was its IP address?
+What was its IP address???
 
 IP : 10.0.0.1
 
