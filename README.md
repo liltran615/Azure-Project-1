@@ -44,9 +44,9 @@ Integrating an ELK server allows users to monitor the Virtual Machines for chang
 
 Filebeat collects data about the file system, and this is sent to Elasticsearch on ELK Server.
 
-Metricbeat Collects metrics to help with the assessment regarding the operational state of computer machines on the network, and then sends it to Elasticsearch on ELK Server. 
+Metricbeat Collects metrics to help with the assessment regarding the operational state of computer machines on the network, and sends it to Elasticsearch on ELK Server. 
 
-The configuration details of each machine may be found below.
+The configuration details of each machine may be found BELOW.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -61,7 +61,7 @@ Only the JUMP-BOX-PROVISOR machine can accept connections from the Internet. Acc
 
 Workstation with PERSONAL IP Address through SSH Port 22.
 
-Machines within the network can only be accessed by JUMP-BOX.
+Machines within this network can only be accessed by JUMP-BOX.
 
 Which machine did you allow to access your ELK VM???
 
@@ -82,13 +82,13 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to make configuration on the ELK machine. No configuration was performed manually which will decrease the chances of mistakes.
+Ansible was used to make configuration on the ELK machine. No configuration were performed manually, which will decrease the chances of mistakes.
 
 [ansible.yml](ansible.yml.TXT)
 
 [ansibleinstall-elk.yml.TXT](ansibleinstall-elk.yml.TXT)
 
-It makes the process of configuring and updating machines to the network easier. We will only have to make changes to the ansible playbook, and it will automatically be changed to all the machines linked with the playbook.
+It makes the process of configuring, and updating machines to the network easier. We will only have to make changes to the ansible playbook, and it will automatically  change to all the machines linked with the playbook.
 
 The playbook implements the following tasks: :books:
 
